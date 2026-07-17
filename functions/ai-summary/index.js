@@ -37,7 +37,7 @@ export async function onRequestPost({ request, env }) {
         ];
 
         console.log('Calling AI model...');
-        const response = await env.AI.run('@cf/meta/llama-2-7b-chat-int8', { messages });
+        const response = await env.AI.run('@cf/meta/llama-3.1-8b-instruct-fast', { messages });
         console.log('AI response received successfully');
 
         return new Response(JSON.stringify({ 
